@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <div className="bg-base-100 shadow-sm">
-      <div className="navbar w-6xl mx-auto ">
+      <div className="navbar max-w-6xl mx-auto ">
         <div className="navbar-start">
           {/* For Mobile Device  */}
           <div className="dropdown">
