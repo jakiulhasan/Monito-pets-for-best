@@ -1,9 +1,10 @@
+import Banner from "@/components/Banner";
 import React from "react";
 
 export default function page() {
   return (
-    <div className="max-max-w-6xl mx-auto h-screen flex justify-center items-center">
-      <h1>This is Homepage</h1>
+    <div className="max-w-6xl mx-auto flex justify-center">
+      <Banner></Banner>
     </div>
   );
 }

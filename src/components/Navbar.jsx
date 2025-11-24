@@ -20,8 +20,8 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="bg-base-100 shadow-sm">
-      <div className="navbar max-w-6xl mx-auto ">
+    <div className="bg-transparent backdrop-blur-sm bg-blur-2 shadow-sm sticky top-0 z-50">
+      <div className="navbar max-w-6xl mx-auto px-10">
         <div className="navbar-start">
           {/* For Mobile Device  */}
           <div className="dropdown">
@@ -91,7 +91,9 @@ export default function Navbar() {
         </div>
 
         <div className="navbar-end">
-          <a className="btn-primary btn px-10 py-1.5 rounded-full">Login</a>
+          <a className="btn bg-foreground text-white px-10 py-1.5 rounded-full">
+            Login
+          </a>
         </div>
       </div>
     </div>
