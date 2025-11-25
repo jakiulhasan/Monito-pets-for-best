@@ -20,7 +20,7 @@ export default function Footer() {
     </Link>,
   ];
   return (
-    <footer className="max-w-6xl mx-auto">
+    <footer className="max-w-6xl mx-auto mt-10">
       <div className="flex flex-col gap-5 lg:flex-row justify-between items-center">
         <div className="flex gap-10 ">{linkItems}</div>
         <div className="flex gap-10 text-2xl">
