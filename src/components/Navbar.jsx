@@ -1,9 +1,12 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import logo from "../assets/logo.png";
 import Image from "next/image";
+import { useSession, signOut } from "next-auth/react";
 
 export default function Navbar() {
+  const { data: session } = useSession();
   const linkItems = [
     <Link href="/" key="home">
       Home
@@ -91,9 +94,23 @@ export default function Navbar() {
         </div>
 
         <div className="navbar-end">
-          <a className="btn bg-foreground text-white px-10 py-1.5 rounded-full">
+          {session ? (
+            <div className="flex items-center gap-4">
+              <span className="font-semibold">Hello, {session.user.name}</span>   
+              <button
+                onClick={() => signOut()}
+                className="btn bg-foreground text-white px-6 py-1.5 rounded-full"
+              >
+                Sign Out
+              </button>
+            </div>
+          ) : (
+          <Link
+            href="/login"
+            className="btn bg-foreground text-white px-10 py-1.5 rounded-full"
+          >
             Login
-          </a>
+          </Link>)}
         </div>
       </div>
     </div>
