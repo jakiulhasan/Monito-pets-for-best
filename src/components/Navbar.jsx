@@ -11,8 +11,8 @@ export default function Navbar() {
     <Link href="/" key="home">
       Home
     </Link>,
-    <Link href="/category" key="category">
-      Category
+    <Link href="/pets" key="category">
+      All Pets
     </Link>,
     <Link href="/about" key="about">
       About
@@ -96,7 +96,7 @@ export default function Navbar() {
         <div className="navbar-end">
           {session ? (
             <div className="flex items-center gap-4">
-              <span className="font-semibold">Hello, {session.user.name}</span>   
+              <span className="font-semibold">Hello, {session.user.name}</span>
               <button
                 onClick={() => signOut()}
                 className="btn bg-foreground text-white px-6 py-1.5 rounded-full"
@@ -105,12 +105,13 @@ export default function Navbar() {
               </button>
             </div>
           ) : (
-          <Link
-            href="/login"
-            className="btn bg-foreground text-white px-10 py-1.5 rounded-full"
-          >
-            Login
-          </Link>)}
+            <Link
+              href="/login"
+              className="btn bg-foreground text-white px-10 py-1.5 rounded-full"
+            >
+              Login
+            </Link>
+          )}
         </div>
       </div>
     </div>

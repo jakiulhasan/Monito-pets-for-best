@@ -6,7 +6,7 @@ import Card from "./Card";
 
 export default function OurPets() {
   const [loading, setLoading] = useState(true);
-  const [pets, setPets] = React.useState([]);
+  const [pets, setPets] = useState([]);
 
   useEffect(() => {
     api.get("/pets").then((res) => {
