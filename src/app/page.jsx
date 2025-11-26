@@ -1,6 +1,7 @@
 import Banner from "@/components/Banner";
 import Hero from "@/components/Hero";
 import OurPets from "@/components/OurPets";
+import PetKnowledge from "@/components/PetKnowledge";
 import React from "react";
 
 export default function page() {
@@ -11,6 +12,7 @@ export default function page() {
       </div>
       <OurPets> </OurPets>
       <Hero></Hero>
+      <PetKnowledge></PetKnowledge>
     </div>
   );
 }
