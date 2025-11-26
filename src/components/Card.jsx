@@ -22,7 +22,7 @@ export default function Card({ pet }) {
         />
       </figure>
       <div className="mt-1.5 p-1.5">
-        <h2 className="font-bold text-xl">{productTitle}</h2>
+        <h2 className="font-bold text-xl line-clamp-1">{productTitle}</h2>
         <p className="text-sm flex items-center gap-1.5 text-[#667479]">
           Gene: {shortDescription.gender} <GoDotFill /> Age:{" "}
           {shortDescription.age}

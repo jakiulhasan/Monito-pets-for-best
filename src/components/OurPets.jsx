@@ -42,7 +42,7 @@ export default function OurPets() {
         </div>
       </div>
 
-      <div className="grid grid-cols-4 gap-4 my-3">
+      <div className="grid md:grid-cols-4 gap-4 my-3">
         {pets.map((pet) => (
           <Card key={pet._id} pet={pet} />
         ))}
