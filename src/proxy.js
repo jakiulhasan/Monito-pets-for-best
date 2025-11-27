@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getToken } from "next-auth/jwt";
 // This function can be marked `async` if using `await` inside
-export async function middleware(request) {
+export async function proxy(request) {
   const token = await getToken({
     req: request,
     secret: process.env.NEXTAUTH_SECRET,
@@ -18,6 +18,5 @@ export async function middleware(request) {
 }
 
 export const config = {
-  matcher: "/add-pet/:path*",
-  matcher: "/manage-pets/:path*",
+  matcher: ["/add-pet/:path*", "/manage-pets/:path*"],
 };
