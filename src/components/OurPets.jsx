@@ -42,9 +42,8 @@ export default function OurPets() {
       </div>
 
       <div className="grid md:grid-cols-4 gap-4 my-3">
-        {pets.map((pet) => (
-          <Card key={pet._id} pet={pet} />
-        ))}
+        {Array.isArray(pets) &&
+          pets.map((pet) => <Card key={pet._id} pet={pet} />)}
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 "use client";
 import api from "@/axios/axios";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 export default function AddPetForm() {
   const [formData, setFormData] = useState({
@@ -44,7 +45,13 @@ export default function AddPetForm() {
       .post("/add-pet", formData)
       .then((response) => {
         console.log("Pet added successfully:", response.data);
-        alert("Pet added successfully!");
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Your work has been saved",
+          showConfirmButton: false,
+          timer: 1500,
+        });
       })
       .catch((error) => {
         console.error("Error adding pet:", error);

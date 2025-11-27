@@ -119,7 +119,7 @@ export default function Navbar() {
                   <Link href={"/add-pet"}>Add Pet</Link>
                 </li>
                 <li>
-                  <Link href={"/add-product"}>Manage Product</Link>
+                  <Link href={"/manage-pets"}>Manage Pets</Link>
                 </li>
                 <li>
                   <button

@@ -2,7 +2,6 @@ import NextAuth from "next-auth";
 import GithubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
 
-
 const handler = NextAuth({
   providers: [
     // OAuth authentication providers...
@@ -10,10 +9,6 @@ const handler = NextAuth({
       clientId: process.env.clientId,
       clientSecret: process.env.clientSecret,
     }),
-    GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    })
   ],
 });
 
