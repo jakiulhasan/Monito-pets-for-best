@@ -103,7 +103,7 @@ export default function Navbar() {
                 className="btn btn-ghost m-1 flex items-center gap-2"
               >
                 <Image
-                  src={session?.user?.image}
+                  src={session?.user?.image || "/default-avatar.png"}
                   width={400}
                   height={400}
                   alt="user photo"
