@@ -30,6 +30,9 @@ export default function ManageCard({ pet }) {
               icon: "success",
             });
           })
+          .then(() => {
+            window.location.reload();
+          })
           .catch((err) => {
             console.error("Error deleting pet:", err);
           });
