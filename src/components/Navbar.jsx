@@ -7,6 +7,7 @@ import { useSession, signOut } from "next-auth/react";
 
 export default function Navbar() {
   const { data: session } = useSession();
+
   const linkItems = [
     <Link href="/" key="home">
       Home
@@ -95,16 +96,46 @@ export default function Navbar() {
 
         <div className="navbar-end">
           {session ? (
-            <div className="flex items-center gap-4">
-              <span className="font-semibold">Hello, {session.user.name}</span>
-              <button
-                onClick={() => signOut()}
-                className="btn bg-foreground text-white px-6 py-1.5 rounded-full"
+            <div className="dropdown dropdown-end">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost m-1 flex items-center gap-2"
               >
-                Sign Out
-              </button>
+                <Image
+                  src={session?.user?.image}
+                  width={400}
+                  height={400}
+                  alt="user photo"
+                  className="w-10 h-10 rounded-full cursor-pointer"
+                ></Image>
+                <h2 className="font-bold">{session?.user?.name}</h2>
+              </div>
+              <ul
+                tabIndex="-1"
+                className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+              >
+                <li>
+                  <Link href={"/add-pet"}>Add Pet</Link>
+                </li>
+                <li>
+                  <Link href={"/add-product"}>Manage Product</Link>
+                </li>
+                <li>
+                  <button
+                    onClick={() => signOut()}
+                    className="btn bg-foreground text-white px-6 py-1.5"
+                  >
+                    Sign Out
+                  </button>
+                </li>
+              </ul>
             </div>
           ) : (
+            // <div className="flex items-center gap-4">
+            //   <span className="font-semibold">Hello, {session.user.name}</span>
+
+            // </div>
             <Link
               href="/login"
               className="btn bg-foreground text-white px-10 py-1.5 rounded-full"

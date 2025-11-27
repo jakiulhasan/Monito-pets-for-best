@@ -10,7 +10,6 @@ export default function OurPets() {
 
   useEffect(() => {
     api.get("/pets").then((res) => {
-      console.log(res.data);
       const filteredPets = res.data.slice(0, 8);
       setPets(filteredPets);
       setLoading(false);

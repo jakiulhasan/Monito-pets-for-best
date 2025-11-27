@@ -3,7 +3,16 @@ const nextConfig = {
   /* config options here */
   reactCompiler: true,
   images: {
-    domains: ["i.ibb.co.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+      {
+        protocol: "http",
+        hostname: "**",
+      },
+    ],
   },
 };
 

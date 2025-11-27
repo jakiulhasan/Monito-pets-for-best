@@ -25,8 +25,8 @@ export default function AboutPage() {
           </h2>
           <p className="text-gray-700 leading-relaxed">
             We believe every pet deserves a caring home. Our platform ensures
-            transparent processes, verified sellers and healthy pets. We're here
-            to make your adoption journey easy, safe and enjoyable.
+            transparent processes, verified sellers and healthy pets. We&apos;re
+            here to make your adoption journey easy, safe and enjoyable.
           </p>
         </div>
 

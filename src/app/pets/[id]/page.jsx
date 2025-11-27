@@ -10,7 +10,6 @@ export default async function PetDetails({ params }) {
   try {
     const response = await api.get(`/pets/${id}`);
     petData = response.data;
-    console.log(petData);
   } catch (error) {
     console.error("Error fetching pet data:", error);
   }

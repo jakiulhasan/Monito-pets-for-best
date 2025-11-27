@@ -25,9 +25,9 @@ export default function Card({ pet }) {
         <h2 className="font-bold text-xl line-clamp-1">{productTitle}</h2>
         <p className="text-sm flex items-center gap-1.5 text-[#667479]">
           Gene: {shortDescription.gender} <GoDotFill /> Age:{" "}
-          {shortDescription.age}
+          {shortDescription.age.split(" ")[0]} Month
         </p>
-        <h2 className="font-bold">Price : {meta.price}</h2>
+        <h2 className="font-bold">Price : {meta.price.split(" ")[0]} VND</h2>
       </div>
     </Link>
   );
