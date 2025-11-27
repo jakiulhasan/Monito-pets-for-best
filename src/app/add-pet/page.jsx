@@ -62,7 +62,7 @@ export default function AddPetForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-2xl mx-auto p-6 mt-5 bg-white shadow-lg rounded-xl space-y-5"
+      className="max-w-2xl mx-auto p-6 mt-5 bg-base-100 shadow-lg rounded-xl space-y-5"
     >
       <h1 className="text-2xl font-bold text-center mb-4">Add New Pet</h1>
 

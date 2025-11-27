@@ -49,8 +49,8 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
-      <div className="w-full max-w-md bg-white shadow-xl rounded-2xl p-8 space-y-6">
+    <div className="min-h-screen flex items-center justify-center bg-base-100 p-4">
+      <div className="w-full max-w-md bg-base-200 shadow-xl rounded-2xl p-8 space-y-6">
         <h1 className="text-3xl font-bold text-center">Create Account</h1>
 
         <form className="space-y-4" onSubmit={handleSubmit}>

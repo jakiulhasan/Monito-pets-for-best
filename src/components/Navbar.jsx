@@ -124,7 +124,7 @@ export default function Navbar() {
                 <li>
                   <button
                     onClick={() => signOut()}
-                    className="btn bg-foreground text-white px-6 py-1.5"
+                    className="btn bg-base-200  px-6 py-1.5"
                   >
                     Sign Out
                   </button>
@@ -138,7 +138,7 @@ export default function Navbar() {
             // </div>
             <Link
               href="/login"
-              className="btn bg-foreground text-white px-10 py-1.5 rounded-full"
+              className="btn bg-base-300 px-10 py-1.5 rounded-full"
             >
               Login
             </Link>

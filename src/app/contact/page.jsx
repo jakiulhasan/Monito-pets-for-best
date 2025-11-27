@@ -1,11 +1,9 @@
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-base-100">
       {/* Hero Section */}
-      <section className="text-center py-16 bg-white shadow-sm">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-          Contact Us
-        </h1>
+      <section className="text-center py-16 bg-base-100 shadow-sm">
+        <h1 className="text-4xl md:text-5xl font-bold  mb-4">Contact Us</h1>
         <p className="text-gray-600 max-w-xl mx-auto">
           Have questions? Need help? We’re always here for you. Send us a
           message and we’ll get back to you as soon as possible.
@@ -14,17 +12,17 @@ export default function ContactPage() {
 
       {/* Contact Info */}
       <section className="container mx-auto px-4 py-16 grid md:grid-cols-3 gap-8">
-        <div className="bg-white p-6 rounded-xl shadow text-center">
+        <div className="bg-base-100 p-6 rounded-xl shadow text-center">
           <h3 className="text-xl font-semibold mb-2">📍 Address</h3>
           <p className="text-gray-600">123 Pet Street, Dhaka, Bangladesh</p>
         </div>
 
-        <div className="bg-white p-6 rounded-xl shadow text-center">
+        <div className="bg-base-100 p-6 rounded-xl shadow text-center">
           <h3 className="text-xl font-semibold mb-2">📞 Phone</h3>
           <p className="text-gray-600">+880 1234-567890</p>
         </div>
 
-        <div className="bg-white p-6 rounded-xl shadow text-center">
+        <div className="bg-base-100 p-6 rounded-xl shadow text-center">
           <h3 className="text-xl font-semibold mb-2">📧 Email</h3>
           <p className="text-gray-600">support@petstore.com</p>
         </div>
@@ -32,10 +30,8 @@ export default function ContactPage() {
 
       {/* Contact Form */}
       <section className="container mx-auto px-4 pb-20">
-        <div className="bg-white p-8 rounded-xl shadow max-w-2xl mx-auto">
-          <h2 className="text-2xl font-semibold mb-6 text-gray-900">
-            Send Us a Message
-          </h2>
+        <div className="bg-base-100 p-8 rounded-xl shadow max-w-2xl mx-auto">
+          <h2 className="text-2xl font-semibold mb-6 ">Send Us a Message</h2>
 
           <form className="grid gap-5">
             <div>

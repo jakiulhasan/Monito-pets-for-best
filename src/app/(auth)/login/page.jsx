@@ -40,8 +40,8 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
-      <div className="w-full max-w-md bg-white shadow-xl rounded-2xl p-8 space-y-2">
+    <div className="min-h-screen flex items-center justify-center bg-base-100 p-4">
+      <div className="w-full max-w-md bg-base-200 shadow-xl rounded-2xl p-8 space-y-2">
         <h1 className="text-3xl font-bold text-center mb-5">Login</h1>
 
         <form className="space-y-4" onSubmit={handleSubmit}>
@@ -89,7 +89,7 @@ export default function LoginPage() {
 
         <button
           onClick={() => signIn("google")}
-          className="w-full py-2 bg-gray-200 rounded-xl hover:bg-gray-300 transition mt-2"
+          className="w-full py-2 bg-base-300 rounded-xl hover:bg-gray-300 transition mt-2"
         >
           <span className="flex items-center justify-center space-x-2">
             <FcGoogle />

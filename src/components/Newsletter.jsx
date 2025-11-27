@@ -18,13 +18,13 @@ export default function Newsletter() {
   };
 
   return (
-    <section className="bg-gray-100 rounded-2xl p-6 md:p-10 mt-10 shadow-md">
+    <section className="bg-base-100 rounded-2xl p-6 md:p-10 mt-10 shadow-md">
       <div className="max-w-2xl mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
+        <h2 className="text-2xl md:text-3xl font-bold ">
           Subscribe to Our Newsletter
         </h2>
 
-        <p className="text-gray-600 mt-2">
+        <p className=" mt-2">
           Get updates, tips, and exclusive content delivered straight to your
           inbox.
         </p>

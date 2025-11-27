@@ -4,5 +4,6 @@ module.exports = {
   theme: {
     extend: {},
   },
+  darkMode: "class", // allows toggling dark mode
   plugins: [require("@tailwindcss/line-clamp")],
 };
