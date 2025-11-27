@@ -13,6 +13,9 @@ export default function AllPets() {
   const [maxPrice, setMaxPrice] = useState(0);
   const [priceLimit, setPriceLimit] = useState(0);
 
+  // Search state
+  const [search, setSearch] = useState("");
+
   useEffect(() => {
     api.get("/pets").then((res) => {
       const data = res.data;
@@ -25,10 +28,8 @@ export default function AllPets() {
         ),
       }));
 
-      // Set state
       setPets(parsed);
 
-      // Find highest price for slider max
       const highest = Math.max(...parsed.map((p) => p.numericPrice));
       setMaxPrice(highest);
       setPriceLimit(highest);
@@ -50,7 +51,10 @@ export default function AllPets() {
     .filter((pet) =>
       gender === "All" ? true : pet?.shortDescription?.gender === gender
     )
-    .filter((pet) => pet.numericPrice <= priceLimit);
+    .filter((pet) => pet.numericPrice <= priceLimit)
+    .filter((pet) =>
+      pet.productTitle.toLowerCase().includes(search.toLowerCase())
+    );
 
   return (
     <div className="my-6">
@@ -64,8 +68,19 @@ export default function AllPets() {
         </p>
       </div>
 
+      {/* Search Bar */}
+      <div className="flex justify-center mb-6">
+        <input
+          type="text"
+          placeholder="🔍 Search by pet name..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="input input-bordered w-full max-w-md"
+        />
+      </div>
+
       {/* Filters */}
-      <div className="flex justify-center flex-col md:flex-row  gap-6 mb-6">
+      <div className="flex justify-center flex-col md:flex-row gap-6 mb-6">
         {/* Gender Filter */}
         <div className="flex justify-center items-center gap-3">
           <label className="font-semibold whitespace-nowrap">Gender:</label>
@@ -81,8 +96,7 @@ export default function AllPets() {
         </div>
 
         {/* Price Slider */}
-
-        <div className="flex justify-center flex-col ">
+        <div className="flex justify-center flex-col">
           <label className="font-semibold flex justify-center mb-1">
             Max Price: {priceLimit.toLocaleString()} VND
           </label>
@@ -92,7 +106,7 @@ export default function AllPets() {
             max={maxPrice}
             value={priceLimit}
             onChange={(e) => setPriceLimit(Number(e.target.value))}
-            className="range range-primary text-center flex justify-center w-64 mx-auto"
+            className="range range-primary text-center w-64 mx-auto"
           />
         </div>
       </div>

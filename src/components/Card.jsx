@@ -28,6 +28,10 @@ export default function Card({ pet }) {
           {shortDescription.age.split(" ")[0]} Month
         </p>
         <h2 className="font-bold">Price : {meta.price.split(" ")[0]} VND</h2>
+        <Link className="btn w-full" href={`/pets/${_id}`}>
+          {" "}
+          View Details{" "}
+        </Link>
       </div>
     </Link>
   );
